@@ -1,6 +1,7 @@
 import { h, render } from 'preact';
+import './style.scss'
 
 const App = () =>
-	<h1>Hello friends! This code is type-safe!!!</h1>;
+	<h2>Hello friends! This code is type-safe!!!</h2>;
 
 render(<App />, document.getElementById('root'));
