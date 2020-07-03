@@ -9,5 +9,9 @@
   },
   "dependencies": {
     "preact": "^10.4.5"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   }
 }
