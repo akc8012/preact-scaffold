@@ -1,7 +1,6 @@
 {
   "name": "preact-scaffold",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
   "license": "GPL-3.0-only",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
