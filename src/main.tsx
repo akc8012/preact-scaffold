@@ -5,19 +5,24 @@ import { useState } from 'preact/hooks'
 import '@fortawesome/fontawesome-free/css/all.css';
 import './style.scss'
 
+enum Selection {
+	Brush = "Brush",
+	Eraser = "Eraser"
+};
+
 function App() {
-	const [value, setValue] = useState(0);
+	const [value, setValue] = useState(Selection.Brush);
 
 	return (
 		// TODO: Find out why I can't use <></>
 		<div>
-			<div>Counter: {value}</div>
-			<button onClick={() => setValue(value + 1)}>
-				<i class="fas fa-paint-brush"></i>
+			<div>Selection: {value}</div>
+			<button onClick={() => setValue(Selection.Brush)}>
+				<i class='fas fa-paint-brush fa-2x'></i>
 			</button>
 
-			<button onClick={() => setValue(value - 1)}>
-				<i class="fas fa-eraser"></i>
+			<button onClick={() => setValue(Selection.Eraser)}>
+				<i class='fas fa-eraser fa-2x'></i>
 			</button>
 		</div>
 	)
