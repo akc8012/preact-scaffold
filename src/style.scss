@@ -10,5 +10,22 @@ body {
 
 .buttons button {
   display: block;
-  margin: 1rem 0;
+  margin: 0.8rem 0;
+}
+
+button {
+  color: black;
+  background-color: white;
+  border: none;
+
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+button:active,
+button.selected {
+  background-color: darkgray;
 }
