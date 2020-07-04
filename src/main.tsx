@@ -6,8 +6,8 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import './style.scss'
 
 enum Selection {
-	Brush = "Brush",
-	Eraser = "Eraser"
+	Brush = 'Brush',
+	Eraser = 'Eraser'
 };
 
 function App() {
@@ -15,14 +15,14 @@ function App() {
 
 	return (
 		// TODO: Find out why I can't use <></>
-		<div>
+		<div class='buttons'>
 			<div>Selection: {value}</div>
-			<button onClick={() => setValue(Selection.Brush)}>
-				<i class='fas fa-paint-brush fa-2x'></i>
+			<button class='brush' onClick={() => setValue(Selection.Brush)}>
+				<i class='fas fa-paint-brush fa-2x' />
 			</button>
 
-			<button onClick={() => setValue(Selection.Eraser)}>
-				<i class='fas fa-eraser fa-2x'></i>
+			<button class='eraser' onClick={() => setValue(Selection.Eraser)}>
+				<i class='fas fa-eraser fa-2x' />
 			</button>
 		</div>
 	)
