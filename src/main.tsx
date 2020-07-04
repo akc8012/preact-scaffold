@@ -17,15 +17,21 @@ function App() {
 		// TODO: Find out why I can't use <></>
 		<div class='buttons'>
 			<div>Choice: <b>{choice}</b></div>
-			<button class='brush' onClick={() => setChoice(Choice.Brush)}>
-				<i class='fas fa-paint-brush fa-2x' />
-			</button>
 
-			<button class='eraser' onClick={() => setChoice(Choice.Eraser)}>
-				<i class='fas fa-eraser fa-2x' />
-			</button>
+			<Button choice={Choice.Brush} click={(clicked: Choice) => setChoice(clicked)} />
+			<Button choice={Choice.Eraser} click={(clicked: Choice) => setChoice(clicked)} />
 		</div>
-	)
+	);
+}
+
+function Button(props: { choice: Choice, click: any }) {
+	let icon = props.choice === Choice.Brush ? 'paint-brush' : 'eraser';
+
+	return (
+		<button onClick={() => props.click(props.choice)}>
+			<i class={`fas fa-${icon} fa-2x`} />
+		</button>
+	);
 }
 
 render(<App />, document.getElementById('root'));
