@@ -1,21 +1,26 @@
 import { h, render } from 'preact';
 import { useState } from 'preact/hooks'
 
+// TODO: Only import what you need!
+import '@fortawesome/fontawesome-free/css/all.css';
 import './style.scss'
 
-const App = () =>
-	<h2>Hello friends! This code is type-safe!! 🥳</h2>;
-
-function Counter() {
+function App() {
 	const [value, setValue] = useState(0);
 
 	return (
+		// TODO: Find out why I can't use <></>
 		<div>
 			<div>Counter: {value}</div>
-			<button onClick={() => setValue(value + 1)}>Increment</button>
-			<button onClick={() => setValue(value - 1)}>Decrement</button>
+			<button onClick={() => setValue(value + 1)}>
+				<i class="fas fa-paint-brush"></i>
+			</button>
+
+			<button onClick={() => setValue(value - 1)}>
+				<i class="fas fa-eraser"></i>
+			</button>
 		</div>
 	)
 }
 
-render(<Counter />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
